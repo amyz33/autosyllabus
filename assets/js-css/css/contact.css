@@ -1,0 +1,12 @@
+@import url(https://fonts.google.com/?thickness=3&selection.family=Lato:300);
+body{
+    font-family: 'Lato', sans-serif !important;
+}
+
+h6.description{
+	font-weight: bold !important;
+	letter-spacing: 2px !important;
+	color: #999 !important;
+	border-bottom: 1px solid rgba(0, 0, 0,0.1) !important;
+	padding-bottom: 5px !important;
+}

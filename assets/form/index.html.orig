@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="/js-css/css/form.css">
+<<<<<<< HEAD
+      <!-- make this neat -->
+     <!--  <script type="text/javascript" src="/js-css/js/main.js"></script> -->
+=======
+      <!-- make this neat 
+      <script type="text/javascript" src="/js-css/js/main.js"></script> -->
+>>>>>>> c6fc7e810f540b963d29685ca699eff0671d4802
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>   
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+      <!--       -->
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+            <ul class="nav navbar-nav">
+               <li><a href="/index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+               <li><a href="/template">Templates</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="/faq"><span class="glyphicon glyphicon-comment"></span> FAQ</a></li>
+               <li><a href="/contact"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+            </ul>
+         </div>
+      </nav>
+      <!-- Main form inputs -->
+      <section class="FAQ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 col-md-offset-1">
+                  <div class="col-lg-12">
+                     <h6 class="page-header lead">Form</h6>
+                     <p class="lead text-center">
+                        Please fill out this form with the appropriate information for your syllabus and then click Submit. You will be able to download your syllabus as a Microsoft Word document after submitting this form. If a field does not apply, please leave it blank. If you've been working on a syllabus already, please click the button below. 
+                     </p>
+
+                     <button type = "button" class="btn btn-primary center-block" id = "load">Load From Previous Save</button> 
+
+                     <!-- Main form inputs -->
+
+                     <div class="divider"></div>
+
+                     <form class="form-horizontal" role="form" id = "create" action = "/form" method = "POST">
+                     <div class= "form-page">
+                        <fieldset>
+                           <legend>Course Identifiers</legend>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="ClassName">Class Name</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="ClassName" id="ClassName" placeholder="e.g. Introductions to Psychology">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="CourseNumber">Course Number</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="CourseNumber" id="CourseNumber" placeholder="e.g. 101">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="sectionNumber">Section Number</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="sectionNumber" id="sectionNumber" placeholder="e.g. 001">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="department">Department</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="department" id="department" placeholder="COMP, PSYC, etc">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="classroom">Classroom</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="classroom" id="classroom" placeholder="Sitterson 014">
+                              </div>
+                           </div>
+                        </fieldset>
+                        <fieldset>
+                           <legend>Class Scheduling/Timing(stilldunnonamelol)</legend>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="classrange">Class Start and End Dates</label>
+                              <div class="col-sm-9 input-group date" id='datetimepicker1'>
+                                 <input type='text' class="form-control" name="classrange" id="classrange" />
+                                 <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-calendar"></span>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="start_time">Class Start Time</label>
+                              <div class="col-sm-9 input-group date" id='datetimepicker3'>
+                                 <input type='text' class="form-control" name="startTime" id="strt_time" />
+                                 <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-time"></span>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="end_time">Class End Time</label>
+                              <div class="col-sm-9 input-group date" id='datetimepicker4'>
+                                 <input type='text' class="form-control" name="endTime" id="end_time" />
+                                 <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-time"></span>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <div class="form-group badge-checkboxes">
+                                 <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="days">Class Days</label>
+                                    <label class="checkbox-inline">
+                                    <input type="checkbox" name="days" value="Monday" id = "MondayCheck">
+                                    <span class="badge">Monday</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input type="checkbox" name="days" value="Tuesday" id = "TuesdayCheck">
+                                    <span class="badge">Tuesday</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input type="checkbox" name="days" value="Wednesday" id = "WednesdayCheck">
+                                    <span class="badge">Wednesday</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input type="checkbox" name="days" value="Thursday" id = "ThursdayCheck">
+                                    <span class="badge">Thursday</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input type="checkbox" name="days" value="Friday" id = "FridayCheck">
+                                    <span class="badge">Friday</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="holidays">Holidays</label>
+                              <div class="col-sm-9 input-group date" id='datetimepicker2'>
+                                 <input type='text' class="form-control" name="holidays" id="holidays" />
+                                 <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-calendar"></span>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <div class="form-group">
+                                 <label class="col-sm-3 control-label" for="term">Term</label>
+                                 <label class="radio-inline">
+                                 <input type="radio" name="terms" value="fall">
+                                 <span class="badge">Fall</span>
+                                 </label>
+                                 <label class="radio-inline">
+                                 <input type="radio" name="terms" value="spring">
+                                 <span class="badge">Spring</span>
+                                 </label>
+                                 <label class="radio-inline">
+                                 <input type="radio" name="terms" value="summer1">
+                                 <span class="badge">Summer I</span>
+                                 </label>
+                                 <label class="radio-inline">
+                                 <input type="radio" name="terms" value="summer2">
+                                 <span class="badge">Summer II</span>
+                                 </label>
+                                 <label class="radio-inline">
+                                 <input type="radio" name="terms" value="maymester">
+                                 <span class="badge">Maymester</span>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="year">Year</label>
+                              <div class="col-sm-9">
+                                 <input type="number" class="form-control" name="year" id="year" placeholder="e.g. 2018">
+                              </div>
+                           </div>
+                        </fieldset>
+                        <fieldset>
+                           <legend>Instructor Identifiers</legend>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="InstructorName">Instructor Name</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="InstructorName" id="InstructorName" placeholder="e.g. Dr. Loeb">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="OfficeLocation">Office Location</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="OfficeLocation" id="OfficeLocation" placeholder="Hamilton 100">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="Phone">Phone Number</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="Phone" id="Phone" placeholder="123-456-7890">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="Email">Email Address</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="Email" id="Email" placeholder="someemail@gmail.com">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="WebAddress">Web Address</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="WebAddress" id="WebAddress" placeholder="www.someaddress.com">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="taInfo">TA Info</label>
+                              <div class="col-sm-9">
+                                 <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                       <table class="table table-bordered table-hover" id="tab_logic">
+                                          <thead>
+                                             <tr >
+                                                <th class="text-center">
+                                                   Name
+                                                </th>
+                                                <th class="text-center">
+                                                   Office
+                                                </th>
+                                                <th class="text-center">
+                                                   Hours
+                                                </th>
+                                                <th class="text-center">
+                                                   Email
+                                                </th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr class="addr">
+                                                <td>
+                                                   <input type="text" name='name'  placeholder='First Last' class="form-control"/>
+                                                </td>
+                                                <td>
+                                                   <input type="text" name='office' placeholder='Hamilton 100' class="form-control"/>
+                                                </td>
+                                                <td>
+                                                   <input type="text" name='hours' placeholder='MW: 1-3 pm, F: 4-5 pm' class="form-control"/>
+                                                </td>
+                                                <td>
+                                                   <input type="text" name='email' placeholder='someemail@gmail.com' class="form-control"/>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                                 <a id="add_row" class="btn btn-default pull-left">Add TA</a><a id='delete_row' class="pull-right btn btn-default">Delete TA</a>
+                              </div>
+                           </div>
+                        </fieldset>
+                        <fieldset>
+                           <legend>Class Information</legend>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="targetAudience">Target Audience</label>
+                              <div class="col-sm-9">
+                                 <textarea class="form-control" rows="3" name="targetAudience" id="targetAudience" placeholder="Explain how the course fits into a broader educational program and to whom the course is targeted."></textarea>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="coursePrereq">Course Prerequisites</label>
+                              <div class="col-sm-9">
+                                 <textarea class="form-control" rows="4" name="coursePrereq" id="coursePrereq" placeholder="Explain course prerequisites or other important rules that describe who is eligible to take the course, who can obtain credit, and how to satisfy any special course registration requirements."></textarea>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="goalObjective">Course Goals and Objective</label>
+                              <div class="col-sm-9">
+                                 <textarea class="form-control" rows="7" name="goalObjective" id="goalObjective" placeholder="State course goals and key learning objectives. These are descriptions of competencies that students should expect to develop in the course.">
+                                  </textarea>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="requirements">Course Requirements</label>
+                              <div class="col-sm-9">
+                                  <textarea class="form-control" rows="3" name="requirements" id="requirements" placeholder="Optional Field"></textarea>
+                              </div>
+                           </div>
+                           <!--
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="grading">Grading(might fix)</label>
+                              <div class="col-sm-9">
+                                 <input type="text" class="form-control" name="grading" id="grading" placeholder="might need to fix this part too">
+                              </div>
+                           </div>
+                           -->
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="grading">Grading Distribution</label>
+                              <div class="col-sm-9">
+                                 <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                       <table class="table table-bordered table-hover" id="tab_logic_two">
+                                          <tbody>
+                                             <tr class="grade_addr">
+                                                <td>
+                                                   <input type="text" name='category'  placeholder='Category (e.g. Tests)' class="form-control"/>
+                                                </td>
+                                                <td>
+                                                   <input type="text" name='weight' placeholder='Weight (e.g. 90%)' class="form-control"/>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td colspan = "2">
+                                                   <textarea class="form-control" rows="4" name="gradingInfo" placeholder='Additional Course Requirements and Policies about Category' id="gradingInfo"></textarea>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                                 <a id="add_grade_row" class="btn btn-default pull-left">Add Grade</a><a id='delete_grade_row' class="pull-right btn btn-default">Delete Grade</a>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="examDates">Exam Dates</label>
+                              <div class="col-sm-9 input-group date" id='datetimepicker5'>
+                                 <input type="text" class="form-control" name="examDates" id="examDates" >
+                                 <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-calendar"></span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="policies">Course Policies</label>
+                              <div class="col-sm-9">
+                                  <textarea class="form-control" rows="5" name="policies" id="policies" placeholder="Optional Field"></textarea>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="resources">Course Resources</label>
+                              <div class="col-sm-9">
+                                  <textarea type="text" class="form-control" rows="7" name="resources" id="resources" placeholder="Provide a list of required text books and other course resources, and an explanation of how to access them. (e.g., whether and how Sakai is used.)"></textarea>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="honorCode">Honor Code</label>
+                              <div class="col-sm-9">
+                                 <textarea type="text" class="form-control" rows="3" name="honorCode" id="honorCode" placeholder="Explain requirements for the course that could have Honor Code consequences. (e.g., working together, assistance in preparing assignments, and open or closed book exams.)"></textarea>
+                              </div>
+                           </div>
+
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="change">Syllabus Change Disclaimer </label>
+                              <div class="col-sm-9">
+                                 <strong> Sample Syllabus Disclaimer: </strong>
+
+                                 <p>The professor reserves the right to make changes to the syllabus, including project due dates and test dates. If such changes are necessary, they will be announced as early as possible.</p>
+
+                                 <input type="checkbox" name="disclaimer" value="standard" id = "disclaimerk">
+                                 <label for="disclaimer">Use this disclaimer</label>
+
+                                 <p></p>
+
+                                 <p> If you would like to write your own custom disclaimer, please do so below.</p>
+                                 <input type="text" class="form-control" name="customDisclaimer" id="customDisclaimer" placeholder="need to chagne this on the backend to be ok with the button">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-sm-3 control-label" for="additional">Additional Information</label>
+                              <div class="col-sm-9">
+                                 <textarea type="text" class="form-control" rows="8" name="additional" id="additional" placeholder="Any additional information can go here and can be moved around once the document is downloaded."></textarea>
+                              </div>
+                           </div>
+                        </fieldset>
+                        <input type = "submit" id = "save" value = "Save" class="btn btn-primary" formaction = "/save"/>
+                        <input type = "submit" id = "create" class="btn btn-success" value = "Create Document"/>
+                        </div> 
+                        <div class="text-center lead" id="savedNotification" style="display:none !important">Saved!</div> 
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script>
+         $('#save').click(function(){
+            $('#savedNotification').css("display:inherit !important;");
+         });
+         $('#load').click(function(){
+            $.ajax({
+               url:'/load',
+               method:"POST",
+               dataType:"json",
+               success:function(data){
+                  var json = data;
+                  $('#ClassName').val(json["ClassName"]);
+                  $('#CourseNumber').val(json["CourseNumber"]);
+                  $('#sectionNumber').val(json["sectionNumber"]);
+                  $('#department').val(json["department"]); 
+                  $('#classroom').val(json["classroom"]);
+                  $('#classrange').val(json["classrange"]);   
+                  $('#strt_time').val(json["startTime"]);
+                  $('#end_time').val(json["endTime"]);
+         
+                  for(var i = 0; i < json.days.length; i++){
+                      if(json["days"][i] === "Monday"){
+                        $("#MondayCheck").prop('checked', true);
+                      }else if(json["days"][i] === "Tuesday"){
+                        $("#TuesdayCheck").prop('checked', true);
+                      }else if(json["days"][i] === "Wednesday"){
+                        $("#WednesdayCheck").prop('checked', true);  
+                      }else if(json["days"][i] === "Thursday"){
+                        $("#ThursdayCheck").prop('checked', true);
+                      }else if(json["days"][i] === "Friday"){
+                        $("#FridayCheck").prop('checked', true);
+                      }
+                  }
+         
+                  $(":radio[value=" + json["terms"] + "]").prop("checked", true);
+         
+                  $('#holidays').val(json["holidays"]);
+                  $('#year').val(json["year"]);
+         
+                  $('#InstructorName').val(json["InstructorName"]);
+                  $('#OfficeLocation').val(json["OfficeLocation"]);
+                  $('#Phone').val(json["Phone"]);
+                  $('#Email').val(json["Email"]);
+                  $('#WebAddress').val(json["WebAddress"]);
+                  
+                  if(json.name.length > 0 && $('#addr').length >= 0){
+                     $(".addr").remove();
+                     for(var j = 0; j < json.name.length; j++){
+                           $('#tab_logic').append("'<tr class = 'addr'><td><input name='name' type='text' placeholder='First Last' class='form-control input-md'  value = " + json['name'][j] + "> </td><td><input  name='office' type='text' placeholder='Hamilton 100'  class='form-control input-md' value = " + json['office'][j] + "></td><td><input  name='hours' type='text' placeholder='MW: 1-3 pm, F: 4-5 pm'  class='form-control input-md' value = " + json['hours'][j] + "></td><td><input  name='email' type='text' placeholder='someemail@gmail.com'  class='form-control input-md' value = " + json['email'][j] + "></td></tr>'");
+                     }
+                  }
+                  
+                  if(json.category.length > 0){
+                     $(".grade_addr").remove();
+                     for(var y = 0; y < json.category.length; y++){
+                        $('#tab_logic_two').append("'<tr class='grade_addr'><td><input type='text' name='category'  placeholder='Category' class='form-control' value = " + json['category'][y] + "></td><td><input type='text' name='weight' placeholder='Weight' class='form-control' value = " + json['weight'][y] + "></td></tr> <tr><td colspan = '2'><textarea class='form-control' rows='4' name='gradingInfo' placeholder='Additional Course Requirements and Policies' value = " + json['gradingInfo'][y] + "></textarea></td></tr>'");
+                     }
+                  }
+
+                  $('#targetAudience').val(json["targetAudience"]);
+                  $('#coursePrereq').val(json["coursePrereq"]);
+                  $('#goalObjective').val(json["goalObjective"]);
+                  $('#requirements').val(json["requirements"]);
+                  $('#grading').val(json["grading"]);
+                  $('#examDates').val(json["examDates"]);
+                  $('#policies').val(json["policies"]);
+                  $('#resources').val(json["resources"]);
+                  $('#honorCode').val(json["honorCode"]);
+                  $('#change').val(json["change"]);
+                  $('#additional').val(json["additional"]);
+         
+               }
+            });
+         });
+      </script>
+      <p><a id = "download"> </a></p>
+      <script>
+           //bootstrap date selector
+             $(function() {
+                 var i = 1;
+                 $("#add_row").click(function() {
+                     
+
+                     $('#tab_logic').append("'<tr class = 'addr'><td><input name='name' type='text' placeholder='First Last' class='form-control input-md'  /> </td><td><input  name='office' type='text' placeholder='Hamilton 100'  class='form-control input-md'></td><td><input  name='hours' type='text' placeholder='MW: 1-3 pm, F: 4-5 pm'  class='form-control input-md'></td><td><input  name='email' type='text' placeholder='someemail@gmail.com'  class='form-control input-md'></td></tr>'");
+                 });
+                 $("#delete_row").click(function() {
+                     $('#tab_logic tbody tr:last').remove();
+                 });
+
+                 $("#add_grade_row").click(function() {
+                     $('#tab_logic_two').append("'<tr class='grade_addr'><td><input type='text' name='category'  placeholder='Category (e.g. Tests)' class='form-control'/></td><td><input type='text' name='weight' placeholder='Weight (e.g. 90%)' class='form-control'/></td></tr><tr><td colspan = '2'><textarea class='form-control' rows='4' name='gradingInfo' placeholder='Additional Course Requirements and Policies' id='gradingInfo'></textarea></td></tr>'");});
+
+                 $("#delete_grade_row").click(function() {
+                     $('#tab_logic_two tbody tr:last').remove();
+                     $('#tab_logic_two tbody tr:last').remove();
+                 });
+
+
+                 $('#datetimepicker1').datepicker({
+                     multidate: 2
+                 });
+
+                 $('#datetimepicker2').datepicker({
+                     multidate: true
+                 });
+
+                 $('#datetimepicker3').datetimepicker({
+                     format: 'LT'
+                 });
+
+                 $('#datetimepicker4').datetimepicker({
+                     format: 'LT'
+                 });
+
+                 $('#datetimepicker5').datepicker({
+                     multidate: true
+                 });
+             });
+             
+         
+      </script>
+   </body>
+</html>

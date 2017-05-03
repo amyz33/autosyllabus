@@ -1,0 +1,45 @@
+.navbar-default{
+	background: black !important;
+}
+
+.topnav:hover{
+	background: #9933ff !important;
+}
+
+html,
+body,
+.view {
+    height: 100%;
+}
+
+.view {
+    background: url("https://static.pexels.com/photos/94363/pexels-photo-94363.jpeg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1, p{
+	color: white !important;
+}
+
+.row.text-center.bod{
+	margin-top: 5em!important;
+}
+
+button{
+	background-color: black; /* purple */
+	border: none;
+    color: #9933ff !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 150% !important;
+}
+
+button:hover{
+	color:black !important;
+	background-color: #9933ff;
+}

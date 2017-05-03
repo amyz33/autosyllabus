@@ -1,0 +1,42 @@
+doctype html
+html
+	head
+		link(rel="stylesheet" type="text/css" href="/js-css/css/index.css")
+		
+		script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+		script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous")
+		script(src="https://multidatespickr.sourceforge.net/jquery-ui.multidatespicker.js")
+		link(rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+
+
+	body 
+		div(class="container-fluid navbar-default")
+			ul(class = "nav navbar-nav")
+				li(class="topnav")
+					a(href="/index.html") 
+						span(class="glyphicon glyphicon-home") 
+						|  Home
+				li(class="topnav") 
+					a(href="/form/index.html") Syllabus Builder
+			ul(class = "nav navbar-nav navbar-right")
+				li(class= "topnav")
+					a(href="/faq/index.html") 
+						span(class="glyphicon glyphicon-comment") 
+						|  FAQ
+				li(class= "topnav")
+					a(href="/contact/index.html") 
+						span(class="glyphicon glyphicon-envelope") 
+						|  Contact
+		div(class="view")
+			div(class="full-bg-img flex-center")
+				div(class="container")
+					div(class="col-md-2")
+					div(style="background: rgba(255,255,255,0.5) !important; margin-top: 10% !important" class="jumbotron row text-center col-md-8")
+						h1(style="color: black !important") Thank you for using AutoSyllabus!
+						|  !{path}
+		
+
+		
